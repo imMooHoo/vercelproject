@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="全网VIP影视会员解析" content="支持爱奇艺、优酷、土豆、乐视、搜狐等视频解析." />
+  <meta name="azure0000" content="VIP影视会员" />
+  <title>在线影视云解析-全网VIP影视会员解析-</title>
+  <!-- Favicon -->
+  <!-- 引入Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link type="text/css" href="./assets/css/argon.min.css" rel="stylesheet" />
+  <link rel="icon" href="./assets/img/MH.ico" type="image/x-icon">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6323331768946829"
+     crossorigin="anonymous"></script>
+</head>
+  <style>
+    /* 样式定义 */
+    .announcement {
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f2f2f2;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 600px;
+        z-index: 1000;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: transparent; /* 背景透明 */
+        border: none; /* 去除边框 */
+        font-size: 30px; /* 字体大小 */
+        color: gray; /* 默认文本颜色 */
+        cursor: pointer; /* 鼠标悬停时为手形光标 */
+        transition: color 0.3s ease; /* 平滑过渡效果 */
+    }
+    
+    .close-btn:hover {
+        color: black; /* 鼠标悬停时文本颜色变为黑色 */
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .hover-img {
+      display: none;
+      position: absolute;
+      top: 50px; /* 调整悬浮图片的垂直位置 */
+      left: 50%; /* 调整悬浮图片的水平位置 */
+      transform: translateX(-50%);
+      z-index: 1000;
+      width: 150px; /* 调整悬浮图片的宽度 */
+      height: auto; /* 让高度根据宽度自动调整 */
+    }
+ 
+/* 当鼠标悬停时显示悬浮图片 */
+    .nav-item:hover .hover-img {
+      display: block;
+    }
+    
+    .tp-ad-text1 {
+      width: 100%;
+      padding-top: 6px;
+      box-sizing: border-box;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .2);
+    }
+
+    .tp-ad-text1 a {
+      color: #7fba00;
+      font-size: 14px;
+      line-height: 38px;
+      text-align: center;
+      border: 1px dashed rgba(0, 0, 0, .2);
+      padding: 0 3px;
+      box-sizing: border-box;
+      float: left;
+      width: 11.5%;
+      height: 38px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 0 0.5% 6px;
+      text-decoration: none;
+      transition: all .6s;
+    }
+
+    .tp-ad-text1 a:hover {
+      font-weight: bold;
+      color: #fff !important;
+      background: #7fba00;
+      transition: all .6s;
+    }
+
+    .tp-ad-text1 a:nth-child(2n) {
+      color: #f74e1e;
+    }
+
+    .tp-ad-text1 a:nth-child(2n):hover {
+      background: #f74e1e;
+      border-color: #f74e1e;
+    }
+
+    .tp-ad-text1 a:nth-child(3n) {
+      color: #00a4ef;
+    }
+
+    .tp-ad-text1 a:nth-child(3n):hover {
+      background: #00a4ef;
+      border-color: #00a4ef;
+    }
+
+    .tp-ad-text1 a:nth-child(4n) {
+      color: #0517c2;
+    }
+
+    .tp-ad-text1 a:nth-child(4n):hover {
+      background: #0517c2;
+      border-color: #0517c2;
+    }
+
+    .tp-ad-text1 a:nth-child(5n) {
+      color: #601165;
+    }
+
+    .tp-ad-text1 a:nth-child(5n):hover {
+      background: #601165;
+      border-color: #601165;
+    }
+
+    .tp-ad-text1 a:nth-child(6n) {
+      color: #ffb900;
+    }
+
+    .tp-ad-text1 a:nth-child(6n):hover {
+      background: #ffb900;
+      border-color: #ffb900;
+    }
+
+    .tp-ad-text1 a:nth-child(7n) {
+      color: #0fc317;
+    }
+
+    .tp-ad-text1 a:nth-child(7n):hover {
+      background: #0fc317;
+      border-color: #0fc317;
+    }
+
+    .tp-ad-text1 a:nth-child(8n) {
+      color: #601165;
+    }
+
+    .tp-ad-text1 a:nth-child(8n):hover {
+      background: #601165;
+      border-color: #601165;
+    }
+
+    .tp-ad-text1 a:nth-child(9n) {
+      color: #fba78f;
+    }
+
+    .tp-ad-text1 a:nth-child(9n):hover {
+      background: #fba78f;
+      border-color: #fba78f;
+    }
+
+    .tp-ad-text1 a:nth-child(10n) {
+      color: #13cf8f;
+    }
+
+    .tp-ad-text1 a:nth-child(10n):hover {
+      background: #13cf8f;
+      border-color: #13cf8f;
+    }
+
+    .tp-ad-text1 a:nth-child(11n) {
+      color: #f74e1e;
+    }
+
+    .tp-ad-text1 a:nth-child(11n):hover {
+      background: #f74e1e;
+      border-color: #f74e1e;
+    }
+
+    .tp-ad-text1 a:nth-child(12n) {
+      color: #ffb900;
+    }
+
+    .tp-ad-text1 a:nth-child(12n):hover {
+      background: #ffb900;
+      border-color: #ffb900;
+    }
+
+    .tp-ad-text1 a:nth-child(13n) {
+      color: #fba78f;
+    }
+
+    .tp-ad-text1 a:nth-child(13n):hover {
+      background: #fba78f;
+      border-color: #fba78f;
+    }
+
+    .tp-ad-text1 a:nth-child(14n) {
+      color: #f74e1e;
+    }
+
+    .tp-ad-text1 a:nth-child(14n):hover {
+      background: #f74e1e;
+      border-color: #f74e1e;
+    }
+
+    .tp-ad-text1 a:nth-child(15n) {
+      color: #7fba00;
+    }
+
+    .tp-ad-text1 a:nth-child(15n):hover {
+      background: #7fba00;
+      border-color: #7fba00;
+    }
+
+    .tp-ad-text1 a:nth-child(16n) {
+      color: #0fc317;
+    }
+
+    .tp-ad-text1 a:nth-child(16n):hover {
+      background: #0fc317;
+      border-color: #0fc317;
+    }
+
+    .tp-ad-text1 a:nth-child(17n) {
+      color: #0517c2;
+    }
+
+    .tp-ad-text1 a:nth-child(17n):hover {
+      background: #0517c2;
+      border-color: #0517c2;
+    }
+
+    .tp-ad-text1 a:nth-child(18n) {
+      color: #13cf8f;
+    }
+
+    .tp-ad-text1 a:nth-child(18n):hover {
+      background: #13cf8f;
+      border-color: #13cf8f;
+    }
+
+    .tp-ad-text1 a:nth-child(19n) {
+      color: #ffb900;
+    }
+
+    .tp-ad-text1 a:nth-child(19n):hover {
+      background: #ffb900;
+      border-color: #ffb900;
+    }
+
+    .tp-ad-text1 a:nth-child(20n) {
+      color: #f74e1e;
+    }
+
+    .tp-ad-text1 a:nth-child(20n):hover {
+      background: #f74e1e;
+      border-color: #f74e1e;
+    }
+
+    @media screen and (max-width: 1198px) {
+      .tp-ad-text1 a {
+        width: 24%;
+      }
+    }
+    
+    /* 针对大屏幕设备的样式 */
+    @media only screen and (min-width: 768px) {
+      .floating-image {
+        position: absolute;
+        top: 80px;
+        left: 74%;
+        width: 138.75px;
+        height: 65.02px;
+      }
+    }
+
+    /* 针对小屏幕设备（如手机）的样式 */
+    @media only screen and (max-width: 767px) {
+      .floating-image {
+        position: absolute;
+        top: 60px;
+        left: 23%;
+        transform: translateX(-50%); /* 水平居中对齐 */
+        width: 120px;
+        height: auto;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="announcement" class="announcement">
+      <button class="close-btn" onclick="closeAnnouncement()">×</button>
+      <p>建议在PC端使用<br>视频链接在PC端网页复制，手机端链接无效</br>视频播放不畅建议选第五个API链接</p>
+  </div>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+        <a href="./buy me a candy.html" onclick="generateButtons()">
+          <img src="./assets/img/Buymeacandy1.png" alt="Click Me" class="floating-image">
+        </a>
+        <a class="navbar-brand smooth " style="font-size: large"
+          href="">全网视频云解析，在线观看超高清画质</a>
+        
+        <!-- 折叠导航栏内容 -->
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="https://m.tb.cn/h.gl3KOwf?tk=vjxg3eTmQt1" target="_blank"
+                data-toggle="tooltip" title="闲鱼店铺">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="nav-link-inner--text d-lg-none">闲鱼</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" target="_blank" data-toggle="tooltip"> 
+                <i class="fab fa-qq"></i> <!-- Font Awesome 图标 -->
+                <img src="./assets/img/QQ.jpg" alt="" class="hover-img"></img>
+                <span class="nav-link-inner--text d-lg-none">QQ</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" target="_blank" data-toggle="tooltip">
+                <i class="fab fa-weixin"></i> <!-- Font Awesome 图标 -->
+                <img src="./assets/img/weixin.jpg" alt="" class="hover-img"></img>
+                <span class="nav-link-inner--text d-lg-none">微信</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" target="_blank" data-toggle="tooltip"
+                title="Github">
+                <i class="fab fa-github"></i>
+                <span class="nav-link-inner--text d-lg-none">Github</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+    
+  <main class="profile-page">
+    <section class="section-profile-cover section-shaped my-0">
+      <!-- Circles background -->
+      <div class="shape shape-style-1 shape-primary alpha-4">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- SVG separator -->
+      <div class="separator separator-bottom separator-skew">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="card card-profile shadow mt--300 ">
+          <div class="px-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <a href="#">
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
+              </div>
+              <div class="col-lg-4 order-lg-1">
+                <div class="card-profile-stats d-flex justify-content-center">
+                  <div>
+                    <span class="heading">1+</span>
+                    <span class="description">解析线路</span>
+                  </div>
+                  <div>
+                    <span class="heading">8+</span>
+                    <span class="description">视频网站</span>
+                  </div>
+                  <div>
+                    <span class="heading">1+</span>
+                    <span class="description">全平台</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hr mt-4"></div>
+            <form>
+              <div class="form-group row">
+                <span class="col-sm-2 col-form-label text-right">请选择API:</span>
+                <div class="col-sm-10">
+                  <select id="api" name="api" class="form-control"></select>
+                </div>
+              </div>
+              <div class="form-group row">
+                <span class="col-sm-2 col-form-label text-right ">视频链接:</span>
+                <div class="col-sm-10">
+                  <input type="" class="form-control" id="url" placeholder="视频链接">
+                </div>
+              </div>
+              <div class=" text-center">
+                <button id="play" class="btn btn-primary btn-round"><i class="fa fa-send-o"></i> 开 始 解 析</button>
+              </div>
+              </br>
+              <div class=" text-center">
+                <button href="" class="btn btn-primary btn-round"><i class="fa fa-send-o"></i>
+                  使用方法：复制任意视频网站VIP链接，粘贴到视频地址栏，点击开始解析即可</button>
+              </div>
+            </form>
+
+            <div class="main text-center sr-only sr-only-focusable">
+              <div class="form-horizontal">
+                <div class="form-group">
+                  <div class="col-sm-10">
+                    <textarea rows="10" id="apiList" class="form-control">
+                https://jx.jsonplayer.com/player/?url=
+                https://jx.777jiexi.com/player/?url=
+                https://jx.yparse.com/index.php?url=
+                http://api.apii.top/?v=
+                https://www.8090g.cn/?url=
+                 </textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mt-5 py-5 border-top text-center">
+              <div class="row justify-content-center">
+                <div class="col-sm-9">
+
+                  <a class="btn btn-success mt-3" href="http://www.le.com/" rel="nofollow" target="_blank">乐视视频</a>
+                  <a class="btn btn-danger mt-3" href="http://www.iqiyi.com/" rel="nofollow" target="_blank">奇艺视频</a>
+                  <a class="btn btn-info mt-3" href="http://www.mgtv.com/" rel="nofollow" target="_blank">芒果视频</a>
+                  <a class="btn btn-warning  mt-3" href="http://www.tudou.com/" rel="nofollow" target="_blank">土豆视频</a>
+
+
+                  <br>
+                  <div class="hr "></div>
+                  <a class="btn btn-primary mt-3" href="http://v.qq.com/" rel="nofollow" target="_blank">腾讯视频</a>
+                  <a class="btn btn-info mt-3" href="http://www.youku.com/" rel="nofollow" target="_blank">优酷视频</a>
+                  <a class="btn btn-success mt-3" href="http://tv.sohu.com/" rel="nofollow" target="_blank">搜狐视频</a>
+                  <a class="btn btn-primary mt-3" href="http://www.pptv.com/" rel="nofollow" target="_blank">pptv视频</a>
+
+
+                </div>
+              </div>
+              <br>
+              <br>
+              <div class=" text-center">
+                <button href="" class="btn btn-primary btn-round"><i class="fa fa-send-o"></i>
+                  --下面是赞助广告--</button>
+              </div>
+
+            </div>
+            <div class="tp-ad-text1" >
+              <a href="http://image.shutong.xyz" title="免费图床" target="_blank">免费在线图床</a>
+              <a href="http://dyqsy.freehost.vip" title="抖音去水印" target="_blank">抖音去水印</a>
+              <a href="http://ai.shutong.xyz" title=Chat-GPT target="_blank">Chat-GPT</a>
+            </div>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="row row-grid align-items-center mb-5">
+        <div class="col-lg-6">
+          <h3 class="text-primary font-weight-light mb-2">
+            欢迎使用在线VIP视频解析!
+          </h3>
+
+        </div>
+        <div class="col-lg-6 text-lg-center btn-wrapper">
+          <a target="_blank"
+            class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip"
+            data-original-title="QQ">
+            <i class="fab fa-qq"></i>
+             
+          </a>
+          <a target="_blank" class="btn btn-neutral btn-icon-only btn-youtube btn-round btn-lg"
+            data-toggle="tooltip" data-original-title="YouTube">
+            <i class="fab  fa-youtube" style="color:white"></i>
+          </a>
+          <a target="_blank" 
+            class="btn btn-neutral btn-icon-only btn-weixin btn-lg btn-round" data-toggle="tooltip"
+            data-original-title="微信">
+            <i class="fab fa-weixin"style="color:green"></i>
+          </a>
+          <a target="_blank" 
+            class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip"
+            data-original-title="Github">
+            <i class="fab fa-github" style="color:white"></i>
+          </a>
+        </div>
+      </div>
+      <hr />
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-6">
+          <div class='copyright'>
+            &copy;2024 mehodekong. All Right Reserved
+            <a href="https://beian.miit.gov.cn/"  class='nav-link' target="_blank">桂ICP备2024039986号</a
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Core -->
+  </div>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script>
+        function closeAnnouncement() {
+            var announcement = document.getElementById('announcement');
+            announcement.style.display = 'none';
+        }
+  </script>
+  <script>
+            
+    function setApi() {
+      $("#api").children().remove();
+      var apilist = $("#apiList").val().split(/\r?\n/);
+      for (var i = 0; i < apilist.length; i++) {
+        $("#api").append("<option>" + apilist[i] + "</option>");
+      }
+    }
+    $("#apiList").blur(function () {
+      setApi();
+      $.cookie("apiList", $("#apiList").val());
+    });
+    $("#play").click(function () {
+      $api = $("#api").val();
+      $url = $("#url").val();
+      if ($url == "" || $url == null || !/^http.*$/.test($url)) {
+        alert('视频地址不正确！');
+        return;
+      }
+      if ($url == "" || $url == null || !/^http.*=$/.test($api)) {
+        alert('无效API！');
+        return;
+      }
+      window.open($api + $url);
+    });
+    function init() {
+      var ckapi = $.cookie("apiList");
+      if (ckapi && ckapi != "") {
+        $("#apiList").val(ckapi);
+      }
+      setApi();
+    }
+    init();
+    function setDefault() {
+      $.cookie("apiList", "");
+      window.location.reload();
+    }
+    console.group("欢迎使用eoemlVIP视频解析飞鸟辅助论坛系统");
+    console.log("github地址：eoeml");
+    console.log("vip视频解析: http://www.lshmds3.top/");
+    console.log("欢迎前来围观、吐槽、点赞、学习、STAR......");
+    console.groupEnd();
+
+    console.group("作者信息");
+    console.log("网名：疯狂的蛤蟆怪");
+    console.log("三楼江湖路漫漫：域名/");
+    console.groupEnd();  
+  </script>
+
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/popper/popper.min.js"></script>
+  <script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="../assets/vendor/headroom/headroom.min.js"></script>
+  <script src="../assets/js/argon.min.js"></script>
+  <sctipt src="../assets/js/dynamic.js"></script>
+  <!-- 引入jQuery（Bootstrap 4需要） -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 引入Popper.js（用于弹出框等） -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- 引入Bootstrap JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Bootstrap 5 JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

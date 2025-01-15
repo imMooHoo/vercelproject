@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/favicon1.ico" type="image/x-icon">
+    <title>Buy me a candy|捐赠</title>
+    <style>
+      /* 页面全局样式 */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;     /* 垂直居中 */
+            background-color: #f0f0f0;
+        }
+
+        /* 两个方块容器 */
+        .container {
+            display: flex;
+            gap: 10px; /* 两个方块之间的间距 */
+        }
+
+        /* 第一个方块样式：300px x 400px */
+        .box1 {
+            width: 300px;
+            height: 400px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden; /* 确保图片不会超出方块边界 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .box1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 确保图片在方块内保持比例，且填满整个方块 */
+        }
+        /* 第二个方块样式：400px x 400px，中间部分挖空 */
+        .box2 {
+            width: 400px;
+            height: 400px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative; /* 为内部元素定位做准备 */
+        }
+         
+        /* 中间空白区域 */
+        .hole {
+            width: 300px;
+            height: 150px;
+            background-color: #f0f0f0; /* 设置与背景色相同的颜色 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 使其居中 */
+            box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.3); /* 添加内凹和外部阴影效果 */
+            border-radius: 10px; /* 圆角效果，确保与父方块一致 */
+            transition: box-shadow 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .text {
+            text-align: center; /* 文字居中 */
+            margin-top: 20%; /* 距离顶部25% */
+            font-size: 28px;
+        }
+        .hole-text {
+            font-size: 25px;
+            color: #333; /* 文字颜色 */
+            padding: 10px; /* 内边距，确保文字不会紧贴边缘 */
+            text-align: center; /* 文字居中对齐 */
+        }
+        
+        /* 显示数字的块 */
+        .number-block {
+            background-color: #4caf50; /* 绿色背景色 */
+            color: white; /* 白色文字 */
+            padding: 0; /* 内边距 */
+            border-radius: 5px; /* 圆角效果 */
+            font-size: 28px;
+            width: 35px; /* 设置最小宽度 */
+            text-align: center; /* 数字居中 */
+            display: inline-block; /* 确保数字块与文字在同一行显示 */
+        }
+        
+        /* 按钮样式 */
+        .button {
+            background-color: white; /* 白色背景色 */
+            border: 2px solid gray; /* 灰色边框 */
+            color: black; /* 黑色文字 */
+            padding: 4px 14px; /* 内边距 */
+            border-radius: 5px; /* 圆角 */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* 默认阴影效果 */
+            font-size: 16px; /* 字体大小 */
+            cursor: pointer; /* 指针效果 */
+            margin: 6px 20px; /* 按钮间隔 */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+        }
+        
+        /* 微信和支付宝按钮 */
+        .special-button {
+            width: 100px;
+            padding: 8px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+
+        }
+        
+        .wechat-button {
+            background-color: #07c160; /* 微信绿色 */
+        }
+
+        .alipay-button {
+            background-color: #1677ff; /* 支付宝蓝色 */
+        }
+        
+ 
+        /* 鼠标悬停效果 */
+        .special-button:hover {
+            box-shadow: none; /* 悬停时去掉阴影 */
+        }
+
+        /* 鼠标点击效果 */
+        .special-button:active {
+            background-color: #e0e0e0; /* 点击时变暗 */
+        }
+        
+        
+        /* 鼠标悬停效果 */
+        .button:hover {
+            background-color: #f0f0f0; /* 悬停时变暗 */
+            box-shadow: none; /* 悬停时去掉阴影 */
+        }
+
+        /* 鼠标点击效果 */
+        .button:active {
+            background-color: #e0e0e0; /* 点击时更深的变暗效果 */
+            box-shadow: none; /* 点击时去掉阴影 */
+        }
+        
+        /* 悬浮时的阴影效果 */
+        .box1:hover, .box2:hover {
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 当鼠标悬停在挖空区域内，内外阴影效果全部消失 */
+        .hole:hover {
+            box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.2); /* 移除外阴影 */
+        }
+        /* 支付图片样式 */
+        #payment-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%; /* 保持图片比例 */
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            visibility: hidden; /* 默认隐藏图片 */
+            z-index: 20; /* 确保图片显示在遮罩层之上 */
+        }
+        /* 遮罩层样式 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* 白色透明层 */
+            visibility: hidden; /* 默认隐藏 */
+            z-index: 10;
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 第一个方块 -->
+        <div class="box1">
+          <img src="./assets/img/buymeacandy.png" alt="Image">
+        </div>
+        <!-- 第二个方块，内含文字 -->
+        <div class="box2">
+          <div class="text">感谢你的支持！</div>
+          <div class="hole">
+            <div class="hole-text">
+              给 我 买
+              <div class="number-block" id="number-block">0</div>
+              颗 糖
+            </div>
+            <div class="buttons">
+              <button class="button" onclick="updateNumber(1)">1颗 / 1￥</button>
+              <button class="button" onclick="updateNumber(3)">3颗 / 3￥</button>
+              <button class="button" onclick="updateNumber(5)">5颗 / 5￥</button>
+              <button class="button" onclick="updateNumber(10)">10颗 / 10￥</button>
+            </div>
+          </div>
+          <!-- 微信和支付宝按钮 -->
+          <div style="position: absolute; bottom: 50px; right: 19%;">
+            <button class="special-button wechat-button" onclick="showImage('wechat')">微信</button>
+            <button class="special-button alipay-button" onclick="showImage('alipay')">支付宝</button>
+          </div>
+        <!-- 遮罩层和支付图片 -->
+        <div class="overlay" id="overlay" onclick="hideImage()"></div>
+        <img id="payment-image" src="" >
+        </div>
+    </div>
+    <script>
+        // 记录当前选择的糖块数和支付方式
+        let selectedAmount = 0;
+        let selectedMethod = '';
+
+        function updateNumber(value) {
+            selectedAmount = value;
+            document.getElementById('number-block').textContent = value;
+        }
+
+        function showImage(paymentMethod) {
+            if (selectedAmount === 0) {
+            alert('请选择一个糖果数目');
+            return;
+        }
+            const paymentImage = document.getElementById('payment-image');
+            const overlay = document.getElementById('overlay');
+            
+            // 如果图片已经显示，再次点击时隐藏图片和遮罩层
+            if (paymentImage.style.visibility === 'visible') {
+                hideImage();
+            } else {
+                // 根据选择的支付方式和糖块数目确定图片路径
+                const imagePath = `./assets/img/pay/${paymentMethod}_${selectedAmount}.jpg`;
+                paymentImage.src = imagePath;
+                selectedMethod = paymentMethod;
+            
+                // 显示遮罩层和图片
+                overlay.style.visibility = 'visible';
+                // 显示图片
+                paymentImage.style.visibility = 'visible';
+            }
+        }    
+        function hideImage() {
+        const paymentImage = document.getElementById('payment-image');
+        const overlay = document.getElementById('overlay');
+        
+        overlay.style.visibility = 'hidden';
+        paymentImage.style.visibility = 'hidden';
+        
+        }
+    </script>
+</body>
+</html>

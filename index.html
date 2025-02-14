@@ -12,25 +12,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link type="text/css" href="./assets/css/argon.min.css" rel="stylesheet" />
   <link rel="icon" href="./assets/img/MH.ico" type="image/x-icon">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6323331768946829"
-     crossorigin="anonymous"></script>
 </head>
   <style>
-    /* 样式定义 */
-    .announcement {
-        position: fixed;
-        top: 20%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #f2f2f2;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        width: 80%;
-        max-width: 600px;
-        z-index: 1000;
-        border-radius: 5px;
-        text-align: center;
-    }
     .close-btn {
         position: absolute;
         top: 5px;
@@ -51,22 +34,6 @@
       position: relative;
     }
 
-    .hover-img {
-      display: none;
-      position: absolute;
-      top: 50px; /* 调整悬浮图片的垂直位置 */
-      left: 50%; /* 调整悬浮图片的水平位置 */
-      transform: translateX(-50%);
-      z-index: 1000;
-      width: 150px; /* 调整悬浮图片的宽度 */
-      height: auto; /* 让高度根据宽度自动调整 */
-    }
- 
-/* 当鼠标悬停时显示悬浮图片 */
-    .nav-item:hover .hover-img {
-      display: block;
-    }
-    
     .tp-ad-text1 {
       width: 100%;
       padding-top: 6px;
@@ -304,15 +271,10 @@
   </style>
 </head>
 <body>
-  <div id="announcement" class="announcement">
-      <button class="close-btn" onclick="closeAnnouncement()">×</button>
-      <p>建议在PC端使用<br>视频链接在PC端网页复制，手机端链接无效</br>视频播放不畅建议选第五个API链接</p>
-  </div>
- 
   <header class="header-global">
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
       <a href="./buy me a candy.html" onclick="generateButtons()">
-          <img src="./assets/img/Buymeacandy1.png" alt="Click Me" class="floating-image">
+        <img src="./assets/img/Buymeacandy1.png" alt="Click Me" class="floating-image">
       </a>
       <div class="container">
         <a class="navbar-brand smooth " style="font-size: large"
@@ -322,7 +284,7 @@
         <div class="navbar-collapse collapse" id="navbar_global">
           <ul class="navbar-nav align-items-lg-center ml-lg-auto">
             <li class="nav-item">
-              <a class="nav-link nav-link-icon" href="https://m.tb.cn/h.gl3KOwf?tk=vjxg3eTmQt1" target="_blank"
+              <a class="nav-link nav-link-icon" target="_blank"
                 data-toggle="tooltip" title="闲鱼店铺">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="nav-link-inner--text d-lg-none">闲鱼</span>
@@ -331,14 +293,12 @@
             <li class="nav-item">
               <a class="nav-link nav-link-icon" target="_blank" data-toggle="tooltip"> 
                 <i class="fab fa-qq"></i> <!-- Font Awesome 图标 -->
-                <img src="./assets/img/QQ.jpg" alt="" class="hover-img"></img>
                 <span class="nav-link-inner--text d-lg-none">QQ</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link nav-link-icon" target="_blank" data-toggle="tooltip">
                 <i class="fab fa-weixin"></i> <!-- Font Awesome 图标 -->
-                <img src="./assets/img/weixin.jpg" alt="" class="hover-img"></img>
                 <span class="nav-link-inner--text d-lg-none">微信</span>
               </a>
             </li>
@@ -428,7 +388,7 @@
               </br>
               <div class=" text-center">
                 <button href="" class="btn btn-primary btn-round"><i class="fa fa-send-o"></i>
-                  使用方法：复制任意视频网站VIP链接，粘贴到视频地址栏，点击开始解析即可</button>
+                  使用方法：复制任意视频网站VIP链接，粘贴到视频地址栏，选择API（建议选第五个），点击开始解析即可</button>
               </div>
             </form>
 
